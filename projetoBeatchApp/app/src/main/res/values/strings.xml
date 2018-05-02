@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BeatchFoodApp</string>
+    <string name="iptNome">Descrição</string>
+    <string name="iptQtd">Quantidade</string>
+    <string name="iptValor">Valor</string>
+    <string name="labelNome">Informe o produto</string>
+    <string name="labelQtd">Informe a quantidade</string>
+    <string name="labelValor">Informe o valor</string>
+    <string name="btnAddItem">Adicionar Pedido</string>
+    <string name="listaProduto">Adicionar Produtos</string>
+    <string name="incrementaQtd">0</string>
+    <string name="btnEntrarApp">Entrar APP</string>
+</resources>

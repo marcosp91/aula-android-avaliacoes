@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/iptNomeItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sisnet.univali.br.beatchfoodapp.PedidoAddActivity">
+
+    <TextView
+        android:id="@+id/listaProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/listaProduto"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/iptNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/iptNome"
+        android:padding="10dp"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listaProduto" />
+
+    <EditText
+        android:id="@+id/labelNome"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/labelNome"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iptNome" />
+
+    <TextView
+        android:id="@+id/iptValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/iptValor"
+        android:padding="10dp"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelNome" />
+
+    <EditText
+        android:id="@+id/labelValor"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/labelValor"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iptValor" />
+
+    <Button
+        android:id="@+id/btnAddItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="@color/colorLogo"
+        android:textColor="@color/white"
+        android:onClick="onClickSalvar"
+        android:text="@string/btnAddItem"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btnAumentar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onClickAumentar"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iptNome" />
+
+    <Button
+        android:id="@+id/btnDiminuir"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onClickDiminuir"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@+id/labelNome"
+        app:layout_constraintTop_toBottomOf="@+id/iptNome" />
+
+    <TextView
+        android:id="@+id/incrementaQtd"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:hint="00"
+        android:padding="10dp"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnAumentar"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toEndOf="@+id/btnDiminuir"
+        app:layout_constraintTop_toBottomOf="@+id/iptNome" />
+
+</android.support.constraint.ConstraintLayout>

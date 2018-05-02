@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/iptNomeItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sisnet.univali.br.beatchfoodapp.PedidoAddActivity">
+
+    <CheckedTextView
+        android:id="@+id/itemCocaCola"
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:checkMark="@drawable/ic_check_box_outline_blank_black_24dp"
+        android:checked="false"
+        android:padding="15dp"
+        android:text="Coca-Cola"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </CheckedTextView>
+
+    <CheckedTextView
+        android:id="@+id/itemCerveja"
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:checkMark="@drawable/ic_check_box_outline_blank_black_24dp"
+        android:checked="false"
+        android:padding="15dp"
+        android:text="Cerveja"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCocaCola">
+
+    </CheckedTextView>
+
+    <CheckedTextView
+        android:id="@+id/itemPastel"
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:checkMark="@drawable/ic_check_box_outline_blank_black_24dp"
+        android:checked="false"
+        android:padding="15dp"
+        android:text="Pastel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCerveja">
+
+    </CheckedTextView>
+
+    <CheckedTextView
+        android:id="@+id/itemMilhoVerde"
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:checkMark="@drawable/ic_check_box_outline_blank_black_24dp"
+        android:checked="false"
+        android:padding="15dp"
+        android:text="Milho Verde"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemPastel">
+
+    </CheckedTextView>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="addQtdItem"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/itemCocaCola"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnDeletar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="deletarQtdItem"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAdd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvQuantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantidade"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="341dp" />
+
+    <Button
+        android:id="@+id/btnAddItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="onClickSalvar"
+        android:hint="@string/btnAddItem"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+
+</android.support.constraint.ConstraintLayout>
