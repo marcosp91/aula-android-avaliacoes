@@ -1,16 +1,26 @@
 package com.sisnet.univali.br.beatchfoodapp.model;
 
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 
-public class Pedido {
+import io.requery.CascadeAction;
+import io.requery.Entity;
+import io.requery.Generated;
+import io.requery.Key;
+import io.requery.OneToMany;
+import io.requery.Persistable;
 
-    int mesaId;
+import static io.requery.CascadeAction.*;
 
-    public int getMesaId() {
-        return mesaId;
-    }
+@Entity
+public interface Pedido extends Parcelable, Persistable  {
 
-    public void setMesaId(int mesaId) {
-        this.mesaId = mesaId;
-    }
+    @Key
+    @Generated
+    int getId();
+
+
+    @OneToMany(mappedBy = "owner", cascade = {CascadeAction.DELETE, CascadeAction.SAVE})
+    ArrayList<Produto> getListaProdutos();
 }

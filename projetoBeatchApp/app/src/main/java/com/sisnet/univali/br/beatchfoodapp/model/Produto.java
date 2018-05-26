@@ -1,14 +1,34 @@
 package com.sisnet.univali.br.beatchfoodapp.model;
 
+import io.requery.Entity;
+import io.requery.Generated;
+import io.requery.Key;
+import io.requery.OneToMany;
 
-public class Produto {
+@Entity
+public abstract class Produto {
 
-    private String nomeProduto;
-    private int quantidadeProduto;
-    private double valorProduto;
-    private double subtotal;
+    @Key
+    @Generated
+    int id;
 
-    public Produto (String nomeProduto, int quantidadeProduto, double valorProduto){
+    @OneToMany
+    Pedido getOwner() { return null; }
+
+    void setOwner(Pedido pedido) { }
+
+    abstract double getSubtotal();
+
+    abstract String getNome();
+
+    abstract int getQuantidade();
+
+    abstract double getValor();
+
+}
+
+
+    /*public Produto (String nomeProduto, int quantidadeProduto, double valorProduto){
 
         this.nomeProduto = nomeProduto;
         this.quantidadeProduto = quantidadeProduto;
@@ -23,37 +43,5 @@ public class Produto {
     public void decrementaQuantidade(int quantidadeProduto){
 
         this.quantidadeProduto = quantidadeProduto - 1;
-    }
+    }*/
 
-    public double getSubtotal() {
-        return subtotal;
-    }
-
-    public void setSubtotal(double subtotal) {
-        this.subtotal = subtotal;
-    }
-
-    public String getNomeProduto() {
-        return nomeProduto;
-    }
-
-    public void setNomeProduto(String nomeProduto) {
-        this.nomeProduto = nomeProduto;
-    }
-
-    public int getQuantidadeProduto() {
-        return quantidadeProduto;
-    }
-
-    public void setQuantidadeProduto(int quantidadeProduto) {
-        this.quantidadeProduto = quantidadeProduto;
-    }
-
-    public double getValorProduto() {
-        return valorProduto;
-    }
-
-    public void setValorProduto(double valorProduto) {
-        this.valorProduto = valorProduto;
-    }
-}
