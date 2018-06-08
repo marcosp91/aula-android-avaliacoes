@@ -10,7 +10,13 @@ Projeto APP bEATch FooD
 ## Avaliação M2
 
 ```
-Empty
+Trabalho pesquisa ORM Activie Android
+
+BeatchFoodAppActivieAndroid
+
+Acadêmicos:
+Marcos Pereira
+Sydrack Marchioretto
 ```
 
 ## Avaliação M3
