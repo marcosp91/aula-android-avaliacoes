@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sydra.beatchfoodapp">
+
+    <application
+        android:name=".config.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="venda_produtos.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.example.sydra.beatchfoodapp.Model.Pedido, com.example.sydra.beatchfoodapp.Model.Produto" />
+
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".PedidoAddActivity"></activity>
+
+        <provider
+            android:name="com.activeandroid.content.ContentProvider"
+            android:authorities="com.example.sydra.beatchfoodapp"
+            android:enabled="true"
+            android:exported="false">
+        </provider>
+    </application>
+
+
+
+</manifest>
+
